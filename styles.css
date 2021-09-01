@@ -1,0 +1,265 @@
+
+body{
+    background: #54A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+h1{
+    color: rgb(208, 195, 255);
+    font-size: 45px;
+    margin: 10px;
+    font-weight: 900;
+    box-shadow: -3px 3px 1px rgb(243, 7, 117); 
+    text-shadow: 3px 3px 1px rgb(67, 23, 139);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+canvas{
+    background: #FFF;
+    box-shadow: 3px 3px 15px #0005;
+}
+canvas:hover{
+    cursor: crosshair;
+}
+
+menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: rgb(58, 49, 80);
+    width: 680px;
+}
+
+#left-content, #right-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#right-content{
+    padding: 10px 0px;
+    padding-right: 10px;
+}
+#left-content{
+    padding: 4px 0px 4px 0px;
+}
+
+
+button{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    position: relative;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+#save-button{
+    background: rgb(58, 49, 80);
+    color: #FFF;
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    align-self: center;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+    transition: filter 0.3s;
+}
+#save-button:hover{
+    cursor: pointer;
+    filter: opacity(0.7);
+}
+
+
+#size-config{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 100px;
+}
+
+
+#cursor-size{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 1px 1px 2px #0009;
+}
+
+#size-config span{
+    display: flex;
+    flex-direction: column;
+}
+
+.size-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin: 2px 0px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: monospace;
+    color: #FFF;
+    background: #54A;
+    transition: filter 0.3s;
+}
+.size-button:hover{
+    cursor: pointer;
+    filter: opacity(0.7);
+}
+
+#colors-container{
+    display: flex;
+}
+
+
+#standard-color-container p, #user-color-container p{
+    margin: 0;
+    font-size: 12px;
+    color: #BBC;
+    padding-top: 2px;
+}
+#standard-color-container, #user-color-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#color-buttons{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 3px;
+}
+#hLine{
+    height: 60px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.534);
+    margin: 0px 6px;
+}
+
+#user-color-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+
+.color-not-selected:hover{
+    cursor: pointer;
+
+    transform: scale(1.1);
+}
+
+.color-selected{
+    transform: scale(1.1);
+    border-width: 2px;
+    border-color: #000;
+    border-style: dashed;
+    
+}
+.color-not-selected{
+    height: 30px;
+    width: 30px;
+}
+
+
+#color-picker-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+}
+#color-picker-container p{
+    margin: 0;
+    margin-bottom: 4px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+
+#tools-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: stretch;
+    align-content: center;
+    padding: 0px 5px;
+    padding-left: 20px;
+}
+#tools-container button{
+    margin: 0;
+}
+
+#pencil{
+    background: rgba(255, 255, 255, 0.2);
+    margin-left: 10px;
+}
+#pencil, #eraser{
+    padding: 3px;
+    background: transparent;
+    border-radius: 8px;
+    margin-left: 25px;
+    font-size: 12px;
+    font-weight: 600;
+}
+#pencil, #eraser:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+#canvas-container{
+    position: relative;
+}
+
+#cursor{
+    height: 8px;
+    width: 8px;
+    color: transparent;
+    border-color: teal;
+    border-width: 2px;
+    border-style: solid;
+    position: absolute;
+    transform:translate(-50%,-50%);
+}
+
+#selected-tool{
+    color: #FFF;
+}
+
+
+#message{
+    color: #FFF;
+    margin: 0;
+    font-weight: 800;
+    font-size: 12px;
+}
