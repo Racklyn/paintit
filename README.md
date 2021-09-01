@@ -1,4 +1,6 @@
-# Paint it! 🎨️
+# Paint it!
+
+<img src="https://user-images.githubusercontent.com/52416026/131702037-4be79b87-6b70-434d-81d9-ccb635e971ea.png" width="70%">
 
 O **Paint it!** é uma ferramenta básica de desenho, que permite o usuário criar suas próprias obras de arte e baixá-las no formato PNG, 
 além de escolher sua próprias cores e alterar o tamanho do pincel e da borracha.
